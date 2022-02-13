@@ -1,0 +1,33 @@
+{
+    "name": "aedart/athenaeum-contracts",
+    "description": "Athenaeum contracts package",
+    "keywords": ["Athenaeum", "Contracts", "Interfaces"],
+    "homepage": "https://aedart.github.io/athenaeum/",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alin Eugen Deac",
+            "email": "aedart@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "illuminate/contracts": "v9.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aedart\\Contracts\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "6.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
