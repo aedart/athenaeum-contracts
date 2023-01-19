@@ -150,19 +150,24 @@ interface FileStream extends Stream
     public function truncate(int $size, bool $moveToEnd = true): static;
 
     /**
+     * TODO: Only available from for PHP v8.1 and upwards
+     * TODO: @see https://github.com/aedart/athenaeum/issues/105
+     *
      * Synchronizes changes to the file
      *
      * @see https://www.php.net/manual/en/function.fsync.php
      * @see https://www.php.net/manual/en/function.fdatasync.php
      *
-     * @param  bool  $withoutMeta  [optional] When `true` data is synchronized
-     *                             to file, but without meta-data.
+     * @param  bool  $includeMeta  [optional] When `true`, meta-data is also
+     *                             synchronized to file.
+     *                             If `false`, meta-data is not synchronized
+     *                             (works only on POSIX systems).
      *
      * @return self
      *
      * @throws StreamException
      */
-    public function sync(bool $withoutMeta = false): static;
+//    public function sync(bool $includeMeta = true): static;
 
     /**
      * Writes all buffered output to the open file

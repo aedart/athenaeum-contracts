@@ -2,6 +2,8 @@
 
 namespace Aedart\Contracts\ETags\Exceptions;
 
+use Throwable;
+
 /**
  * Etag Generator Exception
  *
